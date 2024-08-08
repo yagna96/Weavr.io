@@ -2,8 +2,6 @@ import pandas as pd
 import random as rand 
 from datetime import timedelta,datetime
 
-data_path = 'data/sample-files.xlsx'
-
 def get_user_profile_data(data_path):
     user_profile = pd.read_excel(data_path, sheet_name ='USER')
     return user_profile
@@ -24,7 +22,7 @@ def get_user_state(data_path):
    user_state =  pd .read_excel(data_path, sheet_name ='USER_STATE')
    return user_state
 
-def create_transaction_time_table():
+def create_transaction_time_table(data_path):
      transaction =  get_transactions(data_path)
      transact_time = transaction[['TRANSACTION_ID','CREATION_TIMESTAMP']]
      transact_time['END_TIMESTAMP'] = transact_time['CREATION_TIMESTAMP'].apply(lambda x: x+rand.randint(0,6000))
