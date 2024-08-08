@@ -17,11 +17,12 @@ def create_time_offset(row):
      time_stamp = start_date - timedelta(days = rand.randint(0,90))
      return time_stamp
           
-def card_activity(data_path):
+def create_card_activity(data_path):
      card_account = pd.read_excel(data_path, sheet_name ='CARD_ACCOUNT')
      card_activity = card_account[['CARD_ACCOUNT_ID','USER_ID','FRIENDLY_NAME','IS_ACTIVE']]
      card_activity['LAST_USE'] = card_activity['IS_ACTIVE'].apply(create_time_offset )
      return card_activity
+
 
 
 
