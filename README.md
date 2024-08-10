@@ -8,10 +8,7 @@ This project contains three important components
 Project also contains Dockerfile that installs requirement.txt and tranformation.py 
 
 Tech stack used :
-
-1.Python 
-2.SQL
-3.Docker
+Python , SQL ,Docker
 
 IDE used : VS code
 
