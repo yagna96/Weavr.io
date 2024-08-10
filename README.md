@@ -12,6 +12,6 @@ Python , SQL ,Docker
 
 IDE used : VS code
 
-Potential improvemnts :
+Potential improvements :
 Use of airflow dag to run docker file periodically 
 
